@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=5"/>
+    <link rel="icon" href="devchallenges.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet"/>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Gupter' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Devchallenges</title>
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.display = "block";
+      }
+      
+      function closeNav() {
+        document.getElementById("myNav").style.display = "none";
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Amaranth';
+        background-color: rgb(10, 10, 10); 
+        color: #ddd;
+        overflow-y: auto;
+        max-width: 100%;
+      }
+      * {
+        box-sizing: border-box;
+        /* border: 1px solid #FAA !important;   */
+      } 
+      .header {
+        overflow: hidden;
+        /* background-color: #f1f1f1; */
+        padding: 5px 10px;
+      }
+      .header a {
+        float: left;
+        color: #ddd;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px; 
+        line-height: 25px;
+        border-radius: 4px;
+      }
+      .header .logo {
+        /* font-size: 25px; */
+        /* font-weight: bold; */
+        padding: 4px;
+        border: 2px solid rgb(255, 255, 255);
+        display: block;
+        float: left;
+        margin-left: 50px;
+      }
+      .header-right {
+        float: right;
+        padding-right: 20px;
+      }
+      .header a::after {
+        background: rgb(255, 255, 255);
+        /* color: black; */
+        margin: auto;
+        display: block;
+        width: 0%;
+        height: 2px;
+        content: '';
+        transition: 0.5s;
+      }
+      .header :hover::after {
+        width: 100%;
+      }
+      .overlay .closebtn {
+        display: none;
+      }
+      .header .openbtn {
+        display: none;
+      } 
+      .text-block {
+        position: absolute;   
+        background-color: rgb(10, 10, 10); 
+        color: white;
+        bottom: 25px;
+        width: 27.7%;
+        height: 23%;
+        margin-left: 19.5%;
+        top: 79.3%;
+        padding: 15px 15px 25px 25px;
+        box-shadow: 0px 10px 2px #000000             
+      }
+      .sticky{
+        position: absolute;
+        /* margin-top: 50%;
+        margin-left: 35%; */
+        font-size: 70%;
+      }
+      .footer {
+        
+        text-align: center;
+        padding-top: 5px;
+        font-size: 70%;     
+        display: grid; 
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 3.5rem;
+        top: 110%;
+        
+      }
+
+      @media screen and (max-width: 700px) {
+        .header a {
+          float: none;
+          display: block;
+          text-align: center;
+          color: #ddd;
+          padding: 8px;
+        }
+      
+       
+        .header .openbtn {
+          font-size: 40px;
+          margin-top: 15px;
+          right: 35px;
+          float: right;
+          display: block;
+          cursor: pointer;
+        }
+        .overlay .closebtn {
+          position: absolute;
+          top: 15px;
+          right: 20px;
+          font-size: 45px;
+          display: block;
+          cursor: pointer;
+        }
+        .header .logo {
+          /*display: none;
+           font-size: 25px; */
+          /* font-weight: bold; */
+          padding: 4px;
+          border: 2px solid rgb(255, 255, 255);
+          float: left;  
+          margin-left: 0px;        
+        }
+        .header a::after {
+          background: #ddd;
+          /* color: black; */
+          margin: auto;
+          display: block;
+          width: 0%;
+          height: 2px;
+          content: '';
+          transition: 0.5s;
+          text-decoration: none;
+        }
+        .header :hover::after {
+          width: 23%;
+        }   
+             
+        .overlay {
+          height: 100%;
+          width: 100%;
+          display: none;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          padding-top: 200px;
+          padding-left: 20px;
+          left: 0;
+          background-color: rgb(10, 10, 10);          
+          /* background-color: rgba(0,0,0, 0.9); */
+          overflow-x: hidden;
+          /* transition: 0.5s;            */
+        }
+        .overlay a {
+          position:relative;
+          padding-top: 18px;
+          width: 100%;
+          text-align: center;
+          margin-top: 15px;
+        }
+        .overlay .menu{
+          padding: 200px 50px 10px 150px;
+        }
+      }
+
+     
+
+      .left {
+        /* background-color: #2196F3; */
+        padding: 20px 20px 20px 60px;
+        float: left;
+        width: 40%; /* The width is 20%, by default */
+        margin-top: 12%;
+        letter-spacing: 2px;
+      }
+
+      .main {
+        /* background-color: #f1f1f1; */
+        padding: 40px 50px 120px 80px;
+        float: right;
+        width: 60%; /* The width is 60%, by default */
+        
+      }
+      .avatar {
+        display: flex; 
+        margin-right: 0%;     
+      }
+     
+
+      
+
+      /* Use a media query to add a break point at 800px: */
+      @media screen and (max-width: 950px) {
+        .left, .main, .right {
+          width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+        }
+        .main {
+        /* background-color: #f1f1f1; */
+        padding: 10px;
+        /* The width is 60%, by default */        
+       }
+       .left{
+         margin-top: 0px;
+         padding: 10px;
+       }
+       .left h1{
+         letter-spacing: 7px;
+         font-size: 7vw;
+       }
+       .left p {
+        letter-spacing: 3px;
+       }
+       .text-block {
+          position: absolute;   
+          background-color: rgb(10, 10, 10); 
+          color: white;
+          width: 350px;
+          top: 900px;
+          margin-left: 400px;
+          height: 200px;
+          box-shadow: 0px 10px 2px #000000                 
+        }
+
+      }     
+      /* @media screen and (max-width:420px) {
+        .text-block {
+          position: absolute;   
+          background-color: rgb(10, 10, 10); 
+          color: white;
+          width: 75%;
+          top: 65%;
+          margin-left: 10%;
+          height: 20%;
+          box-shadow: 0px 10px 2px #000000                 
+        }
+
+      } */
+      @media screen and (max-width:600px) {
+        .text-block {
+          position: absolute;   
+          background-color: rgb(10, 10, 10); 
+          color: white;
+          width: 350px;
+          top: 680px;
+          margin-left: 400px;
+          height: 200px;
+          box-shadow: 0px 10px 2px #000000                 
+        }
+
+      }
+      @media screen and (max-width:420px) {
+        .text-block {
+          position: absolute;   
+          background-color: rgb(10, 10, 10); 
+          color: white;
+          width: 250px;
+          top: 580px;
+          margin-left: 100px;
+          height: 150px;
+          box-shadow: 0px 10px 2px #000000                 
+        }
+
+      }
+      @media screen and (max-width:395px) {
+        .text-block {
+          position: absolute;   
+          background-color: rgb(10, 10, 10); 
+          color: white;
+          width: 250px;
+          top: 520px;
+          margin-left: 60px;
+          height: 150px;
+          box-shadow: 0px 10px 2px #000000                 
+        }
+
+      }
+      @media screen and (max-width:325px) {
+        .text-block {
+          position: absolute;   
+          background-color: rgb(10, 10, 10); 
+          color: white;
+          width: 230px;
+          top: 480px;
+          margin-left: 40px;
+          height: 140px;
+          box-shadow: 0px 10px 2px #000000                 
+        }
+
+      }
+      @media screen and (max-width:280px) {
+        .text-block {
+          position: absolute;   
+          background-color: rgb(10, 10, 10); 
+          color: white;
+          width: 230px;
+          top: 570px;
+          margin-left: 10px;
+          height: 130px;
+          box-shadow: 0px 10px 2px #000000                 
+        }
+
+      }
+     
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h4 href="#default" class="logo">THIS INTERIOR</h4>      
+      <span style="font-size:30px;cursor:pointer" class="openbtn" onclick="openNav()">&#9776;</span> 
+      <div class="header-right overlay" id="myNav">        
+        <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>  
+        <a class="active" href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>              
+      </div>
+      
+    </div>
+    <!-- <h2>Media Queries</h2>
+    <p>Resize the browser window.</p>
+
+    <p>Make sure you reach the breakpoint at 800px when resizing this frame.</p> -->
+
+    <div class="left">
+      <h1>Mordern interior</h1>
+      <p >A full-Service residential & <br/>commercial interior design and <br/> staging company offering<br/> professional organizing & <br/> eco-services.</p>
+      <strong>Read more</strong><i class="fa fa-long-arrow-right" style="font-size:20px; margin-left: 10px;margin-top: 5px;"></i></i>
+    </div>
+
+    <div class="main">
+      <img src="photo1.png" class="img_1" style="width:100%">
+      <div class="text-block">
+        <div class=avatar>
+          <img src=photo2.png style="width: 50px;height: 50px; border-radius: 50%; margin-right: 25px;">  
+          <div>
+            <h5 style="margin-top: 5px; margin-bottom: 10px;">Aliza Webber</h4>          
+            <h6 style="margin-top: 0%; margin-bottom: 0%; width: 120px; letter-spacing: 2px;"><small >interior designer</small></h6>
+          </div>       
+        </div>
+        <h3 style="font-family: Gupter;">Designed in 2020 by<br/> Aliza Webber</br.></h3>
+        
+      </div>
+    </div>    
+
+    <footer class="footer"><p>created by <strong>Oluwabori</strong>> - devchallenges.io</p></footer> 
+
+    <!-- <div class="right">
+      <p>Right Content</p>
+    </div> -->
+
+  </body>
+</html>
